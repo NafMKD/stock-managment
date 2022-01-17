@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #e9ecef;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StockManagment.Controllers.UserProfileController">
+   <children>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="1000.0" style="-fx-background-color: #fff;">
+         <children>
+            <Label prefHeight="50.0" prefWidth="179.0" text="SMS - Users">
+               <font>
+                  <Font name="System Italic" size="29.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="40.0" />
+               </HBox.margin>
+            </Label>
+            <JFXButton fx:id="navBarLogout" alignment="CENTER" onAction="#buttonActionHandler" prefHeight="44.0" prefWidth="146.0" style="-fx-cursor: hand;" text="Log out " textFill="#bf1e1e">
+               <graphic>
+                  <FontAwesomeIconView fill="#bf1e1e" glyphName="SIGN_OUT" size="20" />
+               </graphic>
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="620.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children></HBox>
+      <HBox layoutX="250.0" layoutY="50.0" prefHeight="50.0" prefWidth="500.0">
+         <children>
+            <JFXButton fx:id="navBarItem" onAction="#buttonActionHandler" prefHeight="50.0" prefWidth="165.0" style="-fx-background-color: #007bff;" text="Item" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Pane prefHeight="50.0" prefWidth="2.0" style="-fx-background-color: #fff;" />
+            <JFXButton fx:id="navBarCheckOut" onAction="#buttonActionHandler" prefHeight="50.0" prefWidth="165.0" style="-fx-background-color: #007bff;" text="Check out" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Pane layoutX="175.0" layoutY="10.0" prefHeight="50.0" prefWidth="2.0" style="-fx-background-color: #fff;" />
+            <JFXButton fx:id="navBarProfile" onAction="#buttonActionHandler" prefHeight="50.0" prefWidth="167.0" style="-fx-background-color: #343a40;" text="Profile" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </HBox>
+      <ScrollPane layoutY="100.0" prefHeight="501.0" prefWidth="1000.0">
+         <content>
+            <AnchorPane prefHeight="498.0" prefWidth="998.0">
+               <children>
+                  <Label layoutX="38.0" prefHeight="29.0" prefWidth="153.0" text="Profile">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXTabPane layoutX="38.0" layoutY="45.0" prefHeight="437.0" prefWidth="953.0">
+                     <tabs>
+                        <Tab style="-fx-cursor: hand;" text="Personal Information">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="31.0" layoutY="14.0" text="Your Personal Information :">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <VBox layoutX="59.0" layoutY="54.0" prefHeight="384.0" prefWidth="250.0">
+                                       <children>
+                                          <Label alignment="BOTTOM_RIGHT" graphicTextGap="10.0" prefHeight="27.0" prefWidth="304.0" text="Employee ID :">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets right="10.0" top="20.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label alignment="BOTTOM_RIGHT" graphicTextGap="10.0" prefHeight="27.0" prefWidth="295.0" text="Full Name :">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets right="10.0" top="20.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label alignment="BOTTOM_RIGHT" graphicTextGap="10.0" prefHeight="27.0" prefWidth="290.0" text="Email Address :">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets right="10.0" top="20.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label alignment="BOTTOM_RIGHT" graphicTextGap="10.0" prefHeight="27.0" prefWidth="297.0" text="Gender :">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets right="10.0" top="20.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label alignment="BOTTOM_RIGHT" graphicTextGap="10.0" layoutX="10.0" layoutY="91.0" prefHeight="27.0" prefWidth="302.0" text="Role :">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets right="10.0" top="20.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label alignment="BOTTOM_RIGHT" graphicTextGap="10.0" layoutX="10.0" layoutY="118.0" prefHeight="27.0" prefWidth="345.0" text="Birth Date :">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets right="10.0" top="20.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label alignment="BOTTOM_RIGHT" graphicTextGap="10.0" layoutX="10.0" layoutY="145.0" prefHeight="27.0" prefWidth="255.0" text="Registration Date ;">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets right="10.0" top="20.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutX="309.0" layoutY="54.0" prefHeight="384.0" prefWidth="426.0">
+                                       <children>
+                                          <Label fx:id="profEmpId" alignment="BASELINE_LEFT" prefHeight="27.0" prefWidth="447.0">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="10.0" top="20.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label fx:id="profEmpName" alignment="BASELINE_LEFT" prefHeight="27.0" prefWidth="513.0">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="10.0" top="20.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label fx:id="profEmpEmail" alignment="BASELINE_LEFT" prefHeight="27.0" prefWidth="544.0">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="10.0" top="20.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label fx:id="profEmpSex" alignment="BASELINE_LEFT" prefHeight="27.0" prefWidth="499.0">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="10.0" top="20.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label fx:id="ProfEmpRol" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="91.0" prefHeight="27.0" prefWidth="474.0">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="10.0" top="20.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label fx:id="PprofEmpBD" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="118.0" prefHeight="27.0" prefWidth="487.0">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="10.0" top="20.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label fx:id="profEmpRD" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="145.0" prefHeight="27.0" prefWidth="446.0">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="10.0" top="20.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab style="-fx-cursor: hand;" text="Change Password">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="29.0" layoutY="33.0" text="Change Your Password:">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <VBox layoutX="29.0" layoutY="135.0" prefHeight="144.0" prefWidth="232.0">
+                                       <children>
+                                          <Label alignment="BASELINE_RIGHT" graphicTextGap="10.0" prefHeight="17.0" prefWidth="280.0" text="Old Password :">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets right="15.0" top="15.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label alignment="BASELINE_RIGHT" graphicTextGap="10.0" layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="320.0" text="New Password :">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets right="15.0" top="15.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutX="261.0" layoutY="135.0" prefHeight="144.0" prefWidth="365.0">
+                                       <children>
+                                          <JFXPasswordField fx:id="profChngOldPastf" promptText="Enter old password">
+                                             <VBox.margin>
+                                                <Insets top="15.0" />
+                                             </VBox.margin>
+                                          </JFXPasswordField>
+                                          <JFXPasswordField fx:id="profChngNewPastf" promptText="Enter new password">
+                                             <VBox.margin>
+                                                <Insets top="15.0" />
+                                             </VBox.margin>
+                                          </JFXPasswordField>
+                                       </children>
+                                    </VBox>
+                                    <JFXButton graphicTextGap="10.0" layoutX="444.0" layoutY="311.0" onAction="#chengePassword" style="-fx-background-color: #007bff;" text="Change" textFill="WHITE">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fx:id="profChngPassBtn" fill="WHITE" glyphName="EDIT" size="20" text="" />
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <Label fx:id="profChngPassRetMsg" alignment="BASELINE_CENTER" layoutX="33.0" layoutY="86.0" prefHeight="22.0" prefWidth="584.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab style="-fx-cursor: hand;" text="Change Username">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="30.0" layoutY="30.0" text="Change Your Password:">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <VBox layoutX="30.0" layoutY="128.0" prefHeight="100.0" prefWidth="232.0">
+                                       <children>
+                                          <Label alignment="BASELINE_RIGHT" graphicTextGap="10.0" prefHeight="17.0" prefWidth="280.0" text="User Name : ">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets right="15.0" top="15.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutX="262.0" layoutY="128.0" prefHeight="100.0" prefWidth="365.0">
+                                       <children>
+                                          <JFXTextField fx:id="profChngUserName" promptText="Enter New User Nmae">
+                                             <VBox.margin>
+                                                <Insets top="15.0" />
+                                             </VBox.margin>
+                                          </JFXTextField>
+                                       </children>
+                                    </VBox>
+                                    <JFXButton graphicTextGap="10.0" layoutX="445.0" layoutY="228.0" onAction="#chengeUserName" style="-fx-background-color: #007bff;" text="Change" textFill="WHITE">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fx:id="profChngPassBtn1" fill="WHITE" glyphName="EDIT" size="20" text="" />
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <Label fx:id="profChngUserNameRetMsg" alignment="BASELINE_CENTER" layoutX="56.0" layoutY="80.0" prefHeight="22.0" prefWidth="584.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </JFXTabPane>
+               </children></AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

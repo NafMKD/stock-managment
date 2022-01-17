@@ -1,0 +1,69 @@
+
+
+
+#1) Employee:
+		
+		- EID(PK) : int,
+		- Fname : char(50),
+		- Mname : char(50),
+		- Lname : char(50),
+		- Phone(MV) : char(10),
+		- Address(MV) : char(100),
+		- Email : char(50),
+		- Gender : char(1),
+		- BirthDate : DateTime,
+		- RegisterDate : DateTime,
+
+
+#2) Products:
+		
+		- PID(PK) : int,
+		- Pname : char(50),
+		- PDesc : LongText,
+		- ExpireDate : DateTime,
+		- Quantity : real,
+
+
+#3) Customers:
+
+		- CUID(PK) : int,
+		- Fname : char(50),
+		- Lname : char(50),
+		- Phone : char(10),
+		- Address(MV) : char(100),
+
+#4) Roles:
+
+		- RID(PK) : int,
+		- Name : char(50),
+		- RDesc : LongText,
+
+#5) Users:
+		
+		- UID(PK) : int,
+		- Username : char(15),
+		- password : char(100),
+		- LastLogIn : DateTime,
+
+#6) Catagories:
+
+		- CID(PK) : int,
+		- Name : char(50),
+
+#7) Shipments:
+
+		- SID(PK) : int,
+		- StartDate : DateTime,
+
+#8) Cars:
+
+		- CAID(PK) : int,
+		- Plate : char(15),
+		- Capacity : real,
+
+#9) SubCatagories:
+
+		- SCID(PK) : int,
+		- Name : char(50),
+
+

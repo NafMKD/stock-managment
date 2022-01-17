@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #e9ecef;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StockManagment.Controllers.CategoriesController">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="250.0" style="-fx-background-color: #343a40;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <Pane prefHeight="100.0" prefWidth="250.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="84.0" layoutY="32.0" style="-fx-font-size: 25;" text="SMS-Admin" textFill="WHITE" />
+                  <ImageView fitHeight="36.0" fitWidth="49.0" layoutX="26.0" layoutY="32.0" opacity="0.85" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../SMSS/src/img/sLogo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <JFXButton fx:id="asideBtnDashoard" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="370.0" onAction="#buttonActionHandler" prefHeight="52.0" prefWidth="249.0" style="-fx-background-color: #343a40; -fx-cursor: hand;" text="Dashboard" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#fffefe" glyphName="DASHBOARD" opacity="0.85" size="20" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="asideBtnEmployees" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="115.0" onAction="#buttonActionHandler" prefHeight="52.0" prefWidth="249.0" style="-fx-background-color: #343a40; -fx-cursor: hand;" text="Employees" textFill="WHITE">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#fffefe" glyphName="USERS" opacity="0.85" size="20" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="asideBtnCategories" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="167.0" onAction="#buttonActionHandler" prefHeight="52.0" prefWidth="249.0" style="-fx-background-color: #007bff; -fx-cursor: hand;" text="Categories" textFill="WHITE">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#fffefe" glyphName="LIST" opacity="0.85" size="20" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="asideBtnSubCategories" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#buttonActionHandler" prefHeight="52.0" prefWidth="249.0" style="-fx-background-color: #343a40; -fx-cursor: hand;" text="Sub Categories" textFill="WHITE">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#fffefe" glyphName="OUTDENT" opacity="0.85" size="20" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="asideBtnProducts" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="219.0" onAction="#buttonActionHandler" prefHeight="52.0" prefWidth="249.0" style="-fx-background-color: #343a40; -fx-cursor: hand;" text="Items" textFill="WHITE">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#fffefe" glyphName="SHOPPING_CART" opacity="0.85" size="20" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="asideBtnRole" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="271.0" onAction="#buttonActionHandler" prefHeight="52.0" prefWidth="249.0" style="-fx-background-color: #343a40; -fx-cursor: hand;" text="Roles" textFill="WHITE">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#fffefe" glyphName="TASKS" opacity="0.85" size="20" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="asideBtnProfile" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="375.0" onAction="#buttonActionHandler" prefHeight="52.0" prefWidth="249.0" style="-fx-background-color: #343a40; -fx-cursor: hand;" text="Profile" textFill="WHITE">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#fffefe" glyphName="USER" opacity="0.85" size="20" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+      <HBox layoutX="250.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="750.0" style="-fx-background-color: #fff;">
+         <children>
+            <JFXButton fx:id="navBarLogout" alignment="CENTER" onAction="#buttonActionHandler" prefHeight="44.0" prefWidth="146.0" style="-fx-cursor: hand;" text="Log out " textFill="#bf1e1e">
+               <graphic>
+                  <FontAwesomeIconView fill="#bf1e1e" glyphName="SIGN_OUT" size="20" />
+               </graphic>
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="600.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children></HBox>
+      <Label layoutX="250.0" layoutY="50.0" text="Categories :">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <JFXTabPane layoutX="253.0" layoutY="89.0" prefHeight="510.0" prefWidth="740.0">
+         <tabs>
+            <Tab style="-fx-cursor: hand;" text="Add New">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="33.0" layoutY="24.0" text="Add New Category : ">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="addNewCategoryReturnLb" layoutX="181.0" layoutY="82.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Group layoutX="88.0" layoutY="121.0">
+                           <children>
+                              <Group>
+                                 <children>
+                                    <JFXTextField fx:id="addCategoryNameTf" layoutX="164.0" layoutY="2.0" maxWidth="213.0" minWidth="190.0" prefHeight="15.0" prefWidth="200.0" />
+                                    <Label layoutY="5.0" text="Category Name :">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Group>
+                              <Group layoutY="50.0">
+                                 <children>
+                                    <Label layoutY="7.0" text="Category Description :">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXTextArea fx:id="addCategoryDescTf" layoutX="170.0" maxWidth="411.0" minWidth="290.0" prefHeight="134.0" prefWidth="290.0" />
+                                 </children>
+                              </Group>
+                              <Label fx:id="addCategoryNameErrLb" layoutX="14.0" layoutY="33.0" prefHeight="17.0" prefWidth="438.0" textFill="RED" />
+                           </children>
+                        </Group>
+                        <JFXButton fx:id="addCategoryBtn" layoutX="384.0" layoutY="360.0" onAction="#addCategory" style="-fx-background-color: #007bff; -fx-cursor: hand;" text="Add Category" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="#f8f8f8" glyphName="PLUS" size="15" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="llistViewBtnView" onSelectionChanged="#listViewSelectionChange" style="-fx-cursor: hand;" text="List View">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane prefHeight="476.0" prefWidth="740.0">
+                           <content>
+                              <AnchorPane prefHeight="500.0" prefWidth="725.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="10.0" text="List of Categories :">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TableView fx:id="listViewTable" editable="true" layoutX="14.0" layoutY="50.0" prefHeight="400.0" prefWidth="700.0">
+                                      <columns>
+                                        <TableColumn fx:id="listViewColNum" prefWidth="59.0" text="#" />
+                                          <TableColumn fx:id="listViewColName" prefWidth="239.0" text="Name" />
+                                          <TableColumn fx:id="listViewColDesc" prefWidth="177.0" text="Description" />
+                                          <TableColumn fx:id="listViewColstst" minWidth="4.0" prefWidth="73.0" text="status" />
+                                          <TableColumn fx:id="listViewColdatecr" minWidth="4.0" prefWidth="151.0" text="date create" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+</AnchorPane>

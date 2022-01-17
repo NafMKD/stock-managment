@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #e9ecef;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StockManagment.Controllers.EmployeesController">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="250.0" style="-fx-background-color: #343a40;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <Pane prefHeight="100.0" prefWidth="250.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="84.0" layoutY="32.0" style="-fx-font-size: 25;" text="SMS-Admin" textFill="WHITE" />
+                  <ImageView fitHeight="36.0" fitWidth="49.0" layoutX="26.0" layoutY="32.0" opacity="0.85" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../SMSS/src/img/sLogo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <JFXButton fx:id="asideBtnDashoard" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="370.0" onAction="#buttonActionHandler" prefHeight="52.0" prefWidth="249.0" style="-fx-background-color: #343a40; -fx-cursor: hand;" text="Dashboard" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#fffefe" glyphName="DASHBOARD" opacity="0.85" size="20" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="asideBtnEmployees" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="115.0" onAction="#buttonActionHandler" prefHeight="52.0" prefWidth="249.0" style="-fx-background-color: #007bff; -fx-cursor: hand;" text="Employees" textFill="WHITE">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#fffefe" glyphName="USERS" opacity="0.85" size="20" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="asideBtnCategories" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="167.0" onAction="#buttonActionHandler" prefHeight="52.0" prefWidth="249.0" style="-fx-background-color: #343a40; -fx-cursor: hand;" text="Categories" textFill="WHITE">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#fffefe" glyphName="LIST" opacity="0.85" size="20" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="asideBtnSubCategories" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#buttonActionHandler" prefHeight="52.0" prefWidth="249.0" style="-fx-background-color: #343a40; -fx-cursor: hand;" text="Sub Categories" textFill="WHITE">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#fffefe" glyphName="OUTDENT" opacity="0.85" size="20" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="asideBtnProducts" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="219.0" onAction="#buttonActionHandler" prefHeight="52.0" prefWidth="249.0" style="-fx-background-color: #343a40; -fx-cursor: hand;" text="Items" textFill="WHITE">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#fffefe" glyphName="SHOPPING_CART" opacity="0.85" size="20" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="asideBtnRole" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="271.0" onAction="#buttonActionHandler" prefHeight="52.0" prefWidth="249.0" style="-fx-background-color: #343a40; -fx-cursor: hand;" text="Roles" textFill="WHITE">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#fffefe" glyphName="TASKS" opacity="0.85" size="20" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="asideBtnProfile" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="375.0" onAction="#buttonActionHandler" prefHeight="52.0" prefWidth="249.0" style="-fx-background-color: #343a40; -fx-cursor: hand;" text="Profile" textFill="WHITE">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#fffefe" glyphName="USER" opacity="0.85" size="20" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+      <HBox layoutX="250.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="750.0" style="-fx-background-color: #fff;">
+         <children>
+            <JFXButton fx:id="navBarLogout" alignment="CENTER" onAction="#buttonActionHandler" prefHeight="44.0" prefWidth="146.0" style="-fx-cursor: hand;" text="Log out " textFill="#bf1e1e">
+               <graphic>
+                  <FontAwesomeIconView fill="#bf1e1e" glyphName="SIGN_OUT" size="20" />
+               </graphic>
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="600.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children></HBox>
+      <Label layoutX="260.0" layoutY="60.0" text="Employees :">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <JFXTabPane layoutX="263.0" layoutY="99.0" prefHeight="510.0" prefWidth="740.0">
+         <tabs>
+            <Tab style="-fx-cursor: hand;" text="Add New">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="23.0" text="Add New Employee: ">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTabPane fx:id="addEmployeeTabPane" layoutX="1.0" layoutY="51.0" prefHeight="420.0" prefWidth="735.0">
+                           <tabs>
+                              <Tab text="Personal Information">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Group layoutX="14.0" layoutY="14.0">
+                                             <children>
+                                                <Label fx:id="addEmployeRetMsg" alignment="BASELINE_CENTER" layoutX="66.0" layoutY="30.0" prefHeight="26.0" prefWidth="370.0">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="66.0" layoutY="100.0" text="Full Name :">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="66.0" layoutY="141.0" text="Email :">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="66.0" layoutY="183.0" text="Gender :">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="67.0" layoutY="223.0" text="Bitrh Date :">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <JFXTextField fx:id="addEmployeeFullName" layoutX="186.0" layoutY="97.0" prefWidth="250.0" promptText="Enter Full Name" />
+                                                <JFXTextField fx:id="addEmployeeEmail" layoutX="186.0" layoutY="138.0" prefWidth="250.0" promptText="Enter Email" />
+                                                <JFXTextField fx:id="addEmployeeBd" layoutX="186.0" layoutY="217.0" prefWidth="250.0" promptText="Enter Birth Date (yyyy-mm-dd)" />
+                                                <Label layoutX="66.0" layoutY="65.0" text="Role :">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <ComboBox fx:id="addEmployeeRoleSelect" layoutX="186.0" layoutY="65.0" prefWidth="250.0" promptText="-- Select Role --" />
+                                                <ComboBox fx:id="addEmployeeSex" layoutX="186.0" layoutY="183.0" prefWidth="250.0" promptText="-- Select Gender --" />
+                                             </children>
+                                          </Group>
+                                          <JFXButton fx:id="addEmployeeBtn" layoutX="302.0" layoutY="280.0" onAction="#addEmployee" style="-fx-background-color: #007bff; -fx-cursor: hand;" text="Add Employee" textFill="WHITE">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                             <graphic>
+                                                <FontAwesomeIconView fill="#f8f8f8" glyphName="PLUS" size="15" />
+                                             </graphic>
+                                          </JFXButton>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                              <Tab fx:id="selectionTabUsInfo" text="User Information">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="47.0" layoutY="34.0" text="User Login Information :">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="BOTTOM_CENTER" layoutX="143.0" layoutY="99.0" prefHeight="27.0" prefWidth="432.0" text="Save This User Information !" textFill="#0a2f12">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Group layoutX="143.0" layoutY="141.0">
+                                             <children>
+                                                <Label text="UserName :">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutY="53.0" text="Password :">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="addEmployeUserName" layoutX="147.0">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="addEmployeePass" layoutX="147.0" layoutY="53.0">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Group>
+                                          <JFXButton fx:id="addEmployeUserInfoRelod" layoutX="285.0" layoutY="267.0" onAction="#reloadPage" style="-fx-background-color: #007bff; -fx-cursor: hand;" text="Reload" textFill="WHITE">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                             <graphic>
+                                                <FontAwesomeIconView fill="WHITE" glyphName="ROTATE_LEFT" size="15" />
+                                             </graphic>
+                                          </JFXButton>
+                                          <Label fx:id="addEmployeRetSucMsg" alignment="BOTTOM_CENTER" layoutX="143.0" layoutY="72.0" prefHeight="27.0" prefWidth="432.0" textFill="#0a2f12">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                           </tabs>
+                        </JFXTabPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="llistViewBtnView" onSelectionChanged="#listViewSelectionChange" style="-fx-cursor: hand;" text="List View">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane prefHeight="476.0" prefWidth="740.0">
+                           <content>
+                              <AnchorPane prefHeight="500.0" prefWidth="725.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="10.0" text="List of Employees:">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TableView fx:id="listViewTable" editable="true" layoutX="3.0" layoutY="50.0" prefHeight="400.0" prefWidth="800.0">
+                                       <columns>
+                                          <TableColumn fx:id="listViewColNum" prefWidth="59.0" text="#" />
+                                          <TableColumn fx:id="listViewColName" prefWidth="161.0" text="Name" />
+                                          <TableColumn fx:id="listViewColEmail" prefWidth="124.0" text="Email" />
+                                          <TableColumn fx:id="listViewColGen" prefWidth="98.0" text="Gender" />
+                                          <TableColumn fx:id="listViewColBd" prefWidth="106.0" text="Birth Date" />
+                                          <TableColumn fx:id="listViewColRole" prefWidth="89.0" text="Role" />
+                                          <TableColumn fx:id="listViewColRd" minWidth="150.0" prefWidth="120.0" text="Registration Date" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+</AnchorPane>
